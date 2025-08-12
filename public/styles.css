@@ -1,0 +1,63 @@
+/* Quantum Creative Hub - Sıvı Kuantum Theme (Static) */
+
+:root{
+  --deep-purple: #4B0082;
+  --neon-cyan: #00FFFF;
+  --dark-gray: #1C1C1C;
+  --bg-smoke: #0A0A0A;
+  --muted: rgba(255,255,255,0.7);
+  --card-bg: linear-gradient(180deg, rgba(15,15,17,0.6), rgba(12,12,14,0.5));
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body,#app{height:100%;margin:0;padding:0;background:var(--bg-smoke);color:white;font-family:'Open Sans', sans-serif;-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06));backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--deep-purple),rgba(75,0,130,0.85));font-weight:800;font-family:Montserrat;color:var(--neon-cyan)}
+.brand-text .title{font-weight:700;font-family:Montserrat}
+.brand-text .subtitle{font-size:12px;color:var(--muted);font-family:Open Sans}
+.nav-links{display:flex;gap:18px}
+.nav-link{color:var(--muted);text-decoration:none;padding:8px 6px;position:relative}
+.nav-link.active{color:var(--neon-cyan)}
+.nav-link.active::after{content:'';position:absolute;left:12%;right:12%;height:2px;bottom:-6px;background:var(--neon-cyan);border-radius:2px}
+
+/* Hero */
+.hero{padding:24px 0}
+.hero-title{font-size:36px;line-height:1.05;margin:0;font-weight:800;font-family:Montserrat}
+.hero-title .accent{color:var(--neon-cyan)}
+.lead{color:var(--muted);margin-top:12px;margin-bottom:16px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{background:transparent;border:none;padding:10px 14px;border-radius:10px;cursor:pointer;color:var(--muted);font-weight:600}
+.btn.neon{background:linear-gradient(180deg, rgba(75,0,130,0.95), rgba(75,0,130,0.9));color:var(--neon-cyan);box-shadow:0 6px 18px rgba(75,0,130,0.25), 0 0 18px rgba(0,255,255,0.06) inset;transition:transform .22s,box-shadow .22s}
+.btn.neon:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(0,255,255,0.12), 0 0 28px rgba(0,255,255,0.08) inset}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card-bg);padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(4,4,6,0.6)}
+
+/* art */
+.art-card{overflow:hidden;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.5);background:linear-gradient(180deg, rgba(10,10,10,0.6), rgba(8,8,10,0.55))}
+.art-body{padding:12px}
+.tag{font-size:12px;color:var(--muted);margin-bottom:8px}
+.art-placeholder{height:140px;border-radius:8px;background:linear-gradient(180deg,#1f2937,#111827);display:flex;align-items:center;justify-content:center;color:#9CA3AF}
+
+/* utilities */
+.hidden{display:none}
+.tool-area{margin-top:20px}
+
+/* contact */
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.03);color:white}
+
+/* footer */
+.footer{padding:28px 0;color:rgba(255,255,255,0.6);text-align:center}
+
+/* responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns:1fr}
+  .hero{padding:12px 0}
+  .hero-title{font-size:28px}
+  .nav-links{display:none}
+  .mobile-menu{display:block}
+}

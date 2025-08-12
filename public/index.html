@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quantum Creative Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="navbar">
+      <div class="brand"><span class="logo">Q</span><div class="brand-text"><div class="title">Quantum Creative Hub</div><div class="subtitle">Kuantum Yaratıcılık Merkezi</div></div></div>
+      <nav class="nav-links">
+        <a href="#" data-page="home" class="nav-link active">Ana Sayfa</a>
+        <a href="#" data-page="services" class="nav-link">Hizmetler</a>
+        <a href="#" data-page="about" class="nav-link">Hakkımızda</a>
+        <a href="#" data-page="contact" class="nav-link">İletişim</a>
+      </nav>
+      <button id="mobile-menu-btn" class="mobile-menu">☰</button>
+    </header>
+
+    <main class="container">
+      <section id="home" class="page">
+        <div class="hero">
+          <h1 class="hero-title"><span>Yaratıcılığınızı</span><br><span class="accent">serbest bırakın.</span></h1>
+          <p class="lead">Gemini destekli araçlarla anında içerik oluşturun: metin, görsel ve kod — hepsi tek platformda.</p>
+          <div class="hero-actions">
+            <button class="btn neon" data-action="open-text">Metin Oluşturma</button>
+            <button class="btn neon" data-action="open-image">Görsel Oluşturma</button>
+            <button class="btn neon" data-action="open-code">Kod Desteği</button>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="art-card wavy">
+            <svg class="wavy-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,40 C150,120 350,0 600,40 C850,80 1050,20 1200,40 L1200,120 L0,120 Z" fill="rgba(75,0,130,0.18)">
+                <animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0,40 C150,120 350,0 600,40 C850,80 1050,20 1200,40 L1200,120 L0,120 Z; M0,30 C180,60 360,0 600,50 C840,100 1040,10 1200,40 L1200,120 L0,120 Z; M0,40 C150,120 350,0 600,40 C850,80 1050,20 1200,40 L1200,120 L0,120 Z" />
+              </path>
+            </svg>
+            <div class="art-body">
+              <div class="tag">Öne Çıkan - Gemini Sanatı</div>
+              <div class="art-placeholder">Dinamik sanat görüntüsü burada</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="page hidden">
+        <h2>Hizmetler</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Metin Oluşturma</h3>
+            <p>Hikaye, şiir, blog taslağı.</p>
+            <button class="btn" data-action="open-text">Araç</button>
+          </div>
+          <div class="card">
+            <h3>Görsel Oluşturma</h3>
+            <p>Prompt ile AI görsel üretin.</p>
+            <button class="btn" data-action="open-image">Araç</button>
+          </div>
+          <div class="card">
+            <h3>Kod Desteği</h3>
+            <p>Kod sorularınıza cevaplar.</p>
+            <button class="btn" data-action="open-code">Araç</button>
+          </div>
+        </div>
+
+        <div id="tool-area" class="tool-area"></div>
+      </section>
+
+      <section id="about" class="page hidden">
+        <h2>Hakkımızda</h2>
+        <p>Quantum Creative Hub; sanat, metin ve kod alanlarında yapay zekayı yaratıcı ortak olarak konumlandırır.</p>
+      </section>
+
+      <section id="contact" class="page hidden">
+        <h2>İletişim</h2>
+        <form id="contact-form" class="contact-form">
+          <input name="name" placeholder="Adınız" required />
+          <input name="email" placeholder="E-posta" required />
+          <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
+          <button class="btn neon" type="submit">Gönder</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Quantum Creative Hub — Tüm hakları saklıdır.</div>
+    </footer>
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+</html>
